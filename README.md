@@ -32,21 +32,24 @@ To analyze store sales data for 2025 and uncover insights about customer behavio
 
 ## 🧹 Data Cleaning & Preparation
 
-The raw dataset contained inconsistencies, missing values, and formatting issues. The following steps were performed to prepare the data for analysis:
+The raw dataset contained inconsistencies, missing values, and logical errors. The following steps were performed to prepare the data for accurate analysis:
 
 * Removed duplicate records based on Order ID
-* Standardized categorical columns (Gender, Channel) to ensure consistency
+* Standardized categorical columns (Gender, Channel) by removing extra spaces and ensuring consistent naming conventions
 * Handled missing values:
 
   * Replaced missing Gender, City, and State values with "Unknown"
   * Imputed missing Age values using average
   * Removed records with missing critical fields such as Amount and Date
+* Identified and corrected unrealistic values in Age column (e.g., values outside valid range) and treated them as missing before imputation
+* Removed logically inconsistent records such as delivered orders with zero quantity
 * Cleaned and standardized postal code column by replacing invalid entries (e.g., '0', 'n/a', 'xxxx') with "Unknown"
-* Converted Amount column from text (currency format) to numeric values
+* Converted Amount column from text (currency format with Rs./₹ and commas) into numeric values
 * Fixed date format inconsistencies and converted all entries into standard date format
 * Extracted month from date column for time-based analysis
-* Removed logically inconsistent records (e.g., Delivered orders with zero quantity)
-* Cleaned text fields using TRIM and PROPER functions to remove extra spaces and standardize formatting
+* Cleaned text fields using TRIM and PROPER functions to remove hidden spaces and standardize formatting
+* Refreshed pivot tables and cleared cache to ensure updated and accurate analysis
+
 
 
 ---
