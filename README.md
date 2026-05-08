@@ -107,7 +107,7 @@ The cleaned dataset enabled accurate:
 
 # 📷 Dashboard Preview
 
-Sales-Data-Analysis-2025/Sales_Dashboard_2025.jpg
+![Dashboard Preview](Sales-Data-Analysis-2025/Sales_Dashboard_2025.jpg)
 
 
 # 📂 Project Structure
